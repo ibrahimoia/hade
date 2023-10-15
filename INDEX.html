@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar-en">
+<head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title lang="ar">التحضيرية</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <script src="jquery.js"></script>
+
+        <style>
+            head{
+            background-color : red;
+            font-size: 40px;
+            font-family: "Noto Sans",Noto Sans, serif;
+
+            }
+            body {
+            color : orange;
+            font-size: 20px;
+            font-family: "Noto Sans", Noto Sans, serif;
+            text-align: center;
+            background-image: linear-gradient(#6495ED,white,#afc5ff);
+            }
+
+              button {
+              background-color: #4CAF50; /* Green */
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 20px;
+              font-weight:bold;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+            button {
+              background-color: white;
+              color: black;
+              border: 2px solid #4CAF50;
+            }
+
+            button:hover {
+              background-color: #4CAF50;
+              color: white;
+            }
+
+
+            input[type=text],select{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight:bold;
+            text-color: blue;
+            text-align: center;
+            }
+
+            input[type=submit]{
+            width: 100%;
+            background-color: #CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+            input[type=submit]: hover{
+            background-color: green;
+            }
+            div{background-color:black;
+            }
+
+            .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+            -webkit-animation: blink-animation 1s steps(5, start) infinite;
+           }
+          @keyframes blink-animation {
+          to {
+          visibility: hidden;
+          }
+          }
+           @-webkit-keyframes blink-animation {
+          to {
+          visibility: hidden;
+         }
+         }
+
+
+        </style>
+    </head>
+
+    <SCRIPT language=JavaScript>
+
+    <!-- http://www.spacegun.co.uk -->
+
+    var message = "function disabled";
+
+    function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+    if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+    document.onmousedown = rtclickcheck;
+
+    </SCRIPT>
+
+    <nav aria-label="breadcrumb" class="header" style="border-radius: 5px ;font-weight:bold">
+      <h1 style="color:white;font-size: 30px;font-family:Noto Sans;padding: 20px; " >حزب الوطن الديمقراطي الإرتري (حادي)</h1>
+
+        <span class="blink">
+       <p  id = 'ctime' style="color:white;font-size: 30px" >Please Wait Seconds</p>
+        </span>
+
+
+    </nav>
+
+
+
+
+    <body>
+
+        <form onsubmit="return false" style="font-weight:bold">
+        <label for="name"></label>
+        <div class="container" style="border: 2px solid gold; background-color:gray;font-weight:bold;font-size:15px;padding: 20px;background-image: linear-gradient(#afc5ff,white,#008B8B)" >
+        <input type="text" id="name" name="name" value="" style="color:red;border-color:gold;background-color:white" placeholder="Enter Number">
+
+        </div>
+        </form>
+
+      <button class="button-5" role="button"  id="btn-form" type="submit" pys-onClick="sub">استمر</button>
+
+        <p style="font-weight:bold;color:white">***</p>
+        <div class="container" style="border: 2px solid gold; color:#DAA520;font-weight:bold" >
+        <p id = 'output' style="background-color:white"></p>
+        </div>
+        <p>***</p>
+
+        <py-script>
+            import webbrowser
+            import tempfile
+            import os
+
+
+            def sub(year):
+                name = Element("name")
+                if name.value == "5454431" or name.value == "557???6?":
+                    result_place = Element("output")
+                    webbrowser.open_new_tab('SUBJECT.html')
+                    result_place.write("****")
+
+
+                else:
+                    result_place = Element("output")
+                    result_place.write("ادخل الرقم الصحيح وحاول مرة أخرى")
+
+
+        </py-script>
+        </body>
+
+    <div class="container" style="border: 2px solid gold; color:gold;font-weight:bold;padding:20px;" >
+        <footer style="font-size: 50px">
+        <marquee direction="right">
+      <p> حزب الوطن الديمقراطي الإرتري – حادي - اللجنة التحضيرية للمؤتمر السابع</p>
+        </marquee>
+
+      <p id = 'ntime' style="color:white;font-size: 20px" >***</p>
+
+
+    </footer>
+    </div>
+     <nav style="color:maroon">***</nav>
+
+    <body>
+    <py-script>
+     from datetime import datetime
+
+     now = datetime.now()
+     current_time = now.strftime("%Y-%m-%d")
+
+     result_place = Element("ctime")
+     result_place.write("للاستمرار ادخل الرقم السري")
+
+     result_place = Element("ntime")
+     result_place.write(current_time)
+
+    </py-script>
+    </body>
+    </html>
